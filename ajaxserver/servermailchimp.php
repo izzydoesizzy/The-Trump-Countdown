@@ -47,11 +47,11 @@ function storeAddress($user_email){
 	require_once('MCAPI.class.php');
     
 	// grab an API Key from http://admin.mailchimp.com/account/api/
-	$api = new MCAPI('YOUR_APIKEY_HERE');
+	$api = new MCAPI('bc68ef6796fd640b2feebec3caece773-us6');
 	
 	// grab your List's Unique Id by going to http://admin.mailchimp.com/lists/
 	// Click the "settings" link for the list - the Unique Id is at the bottom of that page. 
-	$list_id = "YOUR_LISTID_HERE";
+	$list_id = "5987e40207";
 
 	if($api->listSubscribe($list_id, $user_email, '') === true) {
 		// It worked!	
